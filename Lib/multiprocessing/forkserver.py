@@ -152,8 +152,6 @@ class ForkServer(object):
                     main_kws['sys_path'] = data['sys_path']
                 if 'init_main_from_path' in data:
                     main_kws['main_path'] = data['init_main_from_path']
-            else:
-                main_kws = {}
 
             with socket.socket(socket.AF_UNIX) as listener:
                 address = connection.arbitrary_address('AF_UNIX')
